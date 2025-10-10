@@ -58,7 +58,7 @@ cp .env.example .env   # or create .env manually
 pnpm dev
 
 
-.env EXAMPLE:
+##### .env EXAMPLE:
 
 PORT=4000
 
