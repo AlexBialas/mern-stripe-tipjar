@@ -23,6 +23,7 @@ Die Transaktionen werden in MongoDB gespeichert, und die Gesamtsumme wird auf de
 
 Frontend: React + Vite + TypeScript
 Backend: Express + Node.js + MongoDB (Mongoose)
+
 Payments | Zahlungen: Stripe Checkout (Test Mode)
 Styling: simple CSS / optional Tailwind
 
@@ -43,32 +44,46 @@ Styling: simple CSS / optional Tailwind
 1️⃣ CLONE THE REPOSITORY | REPOSITORY KLONEN
 
 git clone https://github.com/AlexBialas/mern-stripe-tipjar.git
+
 cd mern-stripe-tipjar
 
 2️⃣ BACKEND SETUP (EXPRESS)
 
 cd server
+
 pnpm install
+
 cp .env.example .env   # or create .env manually
+
 pnpm dev
+
 
 .env EXAMPLE:
 
 PORT=4000
+
 MONGO_URL=<your MongoDB Atlas connection string>
+
 STRIPE_SECRET_KEY=sk_test_...
+
 STRIPE_WEBHOOK_SECRET=whsec_...
+
 CLIENT_URL=http://localhost:5173
+
 
 3️⃣ FRONTEND SETUP (REACT)
 
 cd ../web
+
 pnpm install
+
 pnpm dev
+
 
 .env EXAMPLE:
 
 VITE_API_URL=http://localhost:4000
+
 VITE_STRIPE_PUBLISHABLE_KEY=pk_test_...
 
 ---
@@ -76,6 +91,7 @@ VITE_STRIPE_PUBLISHABLE_KEY=pk_test_...
 🧾 STRIPE TEST GUIDE | STRIPE TESTMODUS
 
 1. Start the Stripe CLI listener:
+ 
    stripe listen --forward-to http://localhost:4000/api/webhook
 
 2. Visit http://localhost:5173 in your browser
@@ -92,7 +108,9 @@ VITE_STRIPE_PUBLISHABLE_KEY=pk_test_...
 📦 FOLDER STRUCTURE | PROJEKTSTRUKTUR
 
 mern-stripe-tipjar/
+
 ├── server/   # Express backend (Stripe, MongoDB)
+
 └── web/      # React frontend (Vite)
 
 ---
@@ -100,6 +118,7 @@ mern-stripe-tipjar/
 🧑‍💻 AUTHOR | AUTOR
 
 @AlexBialas
+
 Building modern full-stack projects (AI, Stripe, MERN, Python, WordPress, Shopify).
 
 ---
